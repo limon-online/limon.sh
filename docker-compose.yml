@@ -1,0 +1,14 @@
+version: "3"
+
+
+services:
+  limon-online.com:
+    build: .
+    restart: always
+    image: limon-online.com
+    container_name: frontend
+    ports:
+      - 8080:8080
+    volumes:
+      - ./service:/app
+    command: ['npm', 'run', 'serve']
