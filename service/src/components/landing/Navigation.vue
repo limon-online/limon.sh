@@ -29,8 +29,8 @@
         </ul>
 
         <form class="form-inline my-2 my-md-0">
-          <router-link to="/sign-in" class="auth-link">Sign In</router-link>
-          <router-link to="/sign-up" class="auth-link btn btn-outline-primary">Sign Up</router-link>
+          <router-link to="/sign-in" v-show="this.$route.path !== '/sign-in'" class="auth-link">Sign In</router-link>
+          <router-link to="/sign-up" v-show="this.$route.path !== '/sign-up'" class="auth-link btn btn-outline-primary">Sign Up</router-link>
         </form>
       </div>
     </div>

@@ -10,6 +10,7 @@
 
   @Options({
     mounted() {
+      // TODO: Improve router redirect
       if (this.$store.getters.isUserAuth) {
         this.$router.push({name: 'Dashboard'})
       }
@@ -23,15 +24,9 @@
 
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-body {
-  padding-bottom: 20px;
-}
+  #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 </style>

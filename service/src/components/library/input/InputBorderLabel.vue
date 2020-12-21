@@ -1,10 +1,17 @@
 <template>
-  <!-- TODO: Make up form -->
-  <!--  <div class="form-group input-group">-->
-  <div class="form-group input-group">
+  <div class="form-group">
     <span class="input-label-border">
-      <input :type="[[ type ]]" class="form-control" :id="[[ id ]]" :placeholder="[[ placeholder ]]" required autofocus>
-      <label :for="[[ id ]]">{{ label }}</label>
+      <input
+        :type="[[ type ]]"
+        class="form-control"
+        :id="[[ id ]]"
+        :placeholder="[[ placeholder ]]"
+        required
+        autofocus
+      >
+      <label :for="[[ id ]]">
+        {{ label }}
+      </label>
     </span>
   </div>
 </template>
