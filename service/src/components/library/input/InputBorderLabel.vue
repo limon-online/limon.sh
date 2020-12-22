@@ -2,14 +2,16 @@
   <div class="form-group">
     <span class="input-label-border">
       <input
-        :type="[[ type ]]"
         class="form-control"
-        :id="[[ id ]]"
-        :placeholder="[[ placeholder ]]"
-        required
+        :id="id"
+        :type="type"
+        :placeholder="placeholder"
+        :value="modelValue"
+        @input="$emit('update:modelValue', $event.target.value)"
+        :required="required"
         autofocus
       >
-      <label :for="[[ id ]]">
+      <label :for="id">
         {{ label }}
       </label>
     </span>
@@ -23,11 +25,33 @@
   // TODO: Add tests for component
   @Options({
     props: {
-      id: String,
-      type: String,
-      label: String,
-      placeholder: String
-    }
+      id: {
+        type: String,
+        required: true
+      },
+      // TODO: Add validation for type
+      type: {
+        type: String
+      },
+      label: {
+        type: String,
+        required: true
+      },
+      modelValue: {
+        type: String
+      },
+      placeholder: {
+        type: String
+      },
+      required: {
+        type: Boolean,
+        default: false
+      }
+    },
+
+    emits: [
+      'update:modelValue'
+    ]
   })
   export default class InputBorderLabel extends Vue {}
 </script>
