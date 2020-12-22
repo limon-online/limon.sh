@@ -21,17 +21,19 @@
 
 <script lang="ts">
   import { Options, Vue } from 'vue-class-component';
+  import INPUT_TYPE from "@/components/library/input/consts";
 
-  // TODO: Add tests for component
   @Options({
     props: {
       id: {
         type: String,
         required: true
       },
-      // TODO: Add validation for type
       type: {
-        type: String
+        type: String,
+        validator: (value: string) => {
+          return INPUT_TYPE.includes(value)
+        }
       },
       label: {
         type: String,
