@@ -20,9 +20,10 @@
 
 
 <script lang="ts">
-  import { Options, Vue } from 'vue-class-component';
+  import { defineComponent } from "vue";
 
-  @Options({
+  export default defineComponent({
+    name: "PasswordStrengthMeter",
     props: {
       password: {
         type: String
@@ -79,7 +80,6 @@
       }
     }
   })
-  export default class PasswordStrengthMeter extends Vue {}
 </script>
 
 

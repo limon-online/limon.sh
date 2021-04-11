@@ -4,13 +4,13 @@
 </template>
 
 <script lang="ts">
-  import { Options, Vue } from 'vue-class-component';
+  import { defineComponent } from "vue";
   import Navigation from "@/components/landing/Navigation.vue";
 
-  @Options({
+  export default defineComponent({
+    name: "Landing",
     components: {
       Navigation
     }
   })
-  export default class Landing extends Vue {}
 </script>

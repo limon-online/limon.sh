@@ -25,10 +25,11 @@
 
 
 <script lang="ts">
-  import { Options, Vue } from 'vue-class-component';
+  import { defineComponent } from "vue";
   import InputBorderLabel from "@/components/library/input/InputBorderLabel.vue";
 
-  @Options({
+  export default defineComponent({
+    name: "SignIn",
     components: {
       InputBorderLabel
     },
@@ -40,7 +41,6 @@
       }
     }
   })
-  export default class SignIn extends Vue {}
 </script>
 
 

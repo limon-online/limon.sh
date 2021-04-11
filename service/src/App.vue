@@ -6,9 +6,11 @@
 
 
 <script lang="ts">
-  import { Options, Vue } from 'vue-class-component';
+  import { defineComponent } from "vue";
 
-  @Options({
+  export default defineComponent({
+    name: "App",
+
     mounted() {
       // TODO: Improve router redirect
       if (this.$store.getters.isUserAuth) {
@@ -19,7 +21,6 @@
       }
     }
   })
-  export default class App extends Vue {}
 </script>
 
 

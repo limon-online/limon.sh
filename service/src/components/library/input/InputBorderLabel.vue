@@ -20,10 +20,11 @@
 
 
 <script lang="ts">
-  import { Options, Vue } from 'vue-class-component';
+  import { defineComponent } from "vue";
   import INPUT_TYPE from "@/components/library/input/consts";
 
-  @Options({
+  export default defineComponent({
+    name: "InputBorderLabel",
     props: {
       id: {
         type: String,
@@ -55,7 +56,6 @@
       'update:modelValue'
     ]
   })
-  export default class InputBorderLabel extends Vue {}
 </script>
 
 

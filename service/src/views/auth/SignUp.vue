@@ -34,11 +34,12 @@
 
 
 <script lang="ts">
-  import { Options, Vue } from 'vue-class-component';
+  import { defineComponent } from "vue";
   import InputBorderLabel from "@/components/library/input/InputBorderLabel.vue";
   import PasswordStrengthMeter from "@/components/library/progress/PasswordStrengthMeter.vue";
 
-  @Options({
+  export default defineComponent({
+    name: "SignUp",
     components: {
       InputBorderLabel,
       PasswordStrengthMeter
@@ -51,7 +52,6 @@
       }
     }
   })
-  export default class SignUp extends Vue {}
 </script>
 
 
